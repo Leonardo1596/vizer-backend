@@ -25,7 +25,6 @@ const register = (req, res, next) => {
             return res.json({ message: 'Password and repeatPassword are not the same' });
         } else {
             console.log('Password and repeatPassword are the same');
-            // res.json({ message: 'Password and repeatPassword are the same' });
 
             // Check if email already exists
             User.findOne({ email: req.body.email })
